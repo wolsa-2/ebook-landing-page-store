@@ -1,0 +1,8 @@
+{
+  "name": "Evelyn Reed | Author Portfolio",
+  "description": "Modern landing page for author Evelyn Reed, featuring published works on KDP and Google Play Books.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
