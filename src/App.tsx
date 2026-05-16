@@ -56,6 +56,20 @@ export default function App() {
       coverUrl: "https://i.ibb.co/9d4FD8N/1.png",
       buyUrl: "https://play.google.com/store/books/details?id=QL_TEQAAQBAJ",
       price: "Romance"
+    },
+    {
+      title: "FAST MONEY 2026",
+      description: "💡 Want to earn money using AI in 2026? This beginner-friendly guide shows you simple, practical ways to start earning with AI.",
+      coverUrl: "https://i.ibb.co/MDHCsdZ1/GGKEY-UBN5-LWX2-XK2-frontcover.jpg",
+      buyUrl: "https://play.google.com/store/books/details?id=vSPMEQAAQBAJ",
+      price: "Finance / AI"
+    },
+    {
+      title: "KAGE NO KAMI",
+      description: "KAGE NO KAMI is a dark fantasy story about a teenage boy who discovers a mysterious power hidden within the shadows. As strange events begin to unfold around him, he learns about an ancient force known as the Shadow God. With danger rising and darkness spreading, he must decide whether to control the power… or be consumed by it.",
+      coverUrl: "https://i.ibb.co/YFbyFb4q/GGKEY-5-W13-SCK5763-frontcover.jpg",
+      buyUrl: "https://play.google.com/store/books/details?id=Y2jIEQAAQBAJ",
+      price: "Dark Fantasy"
     }
   ];
 
