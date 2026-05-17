@@ -5,15 +5,62 @@
   --font-serif: "Cormorant Garamond", serif;
   --font-sans: "Inter", sans-serif;
   
-  --color-brand-primary: #1a1a1a;
-  --color-brand-secondary: #5a5a40;
-  --color-brand-accent: #c4a484;
+  --color-brand-primary: #0a0a0a;
+  --color-brand-secondary: #3d3d2a;
+  --color-brand-accent: #e5c9a4;
+  --color-brand-muted: #8a8a8a;
 }
 
 @layer base {
-  body {
-    @apply bg-[#FDFCFB] text-brand-primary font-sans antialiased selection:bg-brand-accent/30;
+  html {
+    scroll-behavior: smooth;
   }
+  
+  body {
+    @apply bg-[#fdfaf6] text-brand-primary font-sans antialiased selection:bg-brand-accent selection:text-brand-primary;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-brand-primary/20 rounded-full hover:bg-brand-primary/40 transition-colors;
+  }
+}
+
+.mesh-gradient {
+  background: 
+    radial-gradient(circle at 0% 0%, rgba(229, 201, 164, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 100% 100%, rgba(61, 61, 42, 0.1) 0%, transparent 40%),
+    #fdfaf6;
+}
+
+.glass-card {
+  @apply bg-white/40 backdrop-blur-3xl border border-white/40 shadow-[0_10px_40px_-5px_rgba(0,0,0,0.03)];
+}
+
+.text-reveal-mask {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to bottom, #0a0a0a 0%, #3d3d2a 100%);
+}
+
+.hover-glow {
+  @apply transition-all duration-500 hover:shadow-[0_0_80px_-10px_rgba(229,201,164,0.3)];
+}
+
+.animate-spin-slow {
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .markdown-body {

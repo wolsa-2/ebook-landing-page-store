@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+import { ArrowRight } from "lucide-react";
 
 interface BookCardProps {
   title: string;
@@ -7,9 +8,10 @@ interface BookCardProps {
   coverUrl: string;
   buyUrl: string;
   price?: string;
+  platform?: "Amazon Kindle" | "Google Play";
 }
 
-export function BookCard({ title, description, coverUrl, buyUrl, price }: BookCardProps) {
+export function BookCard({ title, description, coverUrl, buyUrl, price, platform }: BookCardProps) {
   const [imgSrc, setImgSrc] = useState(coverUrl);
   const [hasError, setHasError] = useState(false);
 
@@ -23,40 +25,53 @@ export function BookCard({ title, description, coverUrl, buyUrl, price }: BookCa
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true }}
-      className="group relative bg-white border border-black/5 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+      transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
+      viewport={{ once: true, margin: "-100px" }}
+      className="group relative glass-card overflow-hidden rounded-[2.5rem] transition-all duration-700 hover:-translate-y-4 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)]"
     >
-      <div className="aspect-[3/4] overflow-hidden rounded-lg bg-gray-100 mb-4 relative">
+      <div className="aspect-[3/4] overflow-hidden relative">
         <img
           src={imgSrc}
-          alt={title}
+          alt={`Ebook cover for ${title} by Evelyn Reed`}
           referrerPolicy="no-referrer"
           onError={handleImageError}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/80 via-brand-primary/20 to-transparent opacity-40 group-hover:opacity-60 transition-opacity duration-700" />
+        
+        {/* Platform Badge */}
+        {platform && (
+          <div className="absolute top-6 left-6 px-4 py-2 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full text-[10px] font-black uppercase tracking-[0.2em] text-white">
+            {platform}
+          </div>
+        )}
+
         {price && (
-          <div className="absolute top-2 right-2 bg-white/90 backdrop-blur px-2 py-1 rounded text-xs font-semibold shadow-sm">
+          <div className="absolute bottom-6 right-6 bg-brand-accent text-brand-primary px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.3em] shadow-2xl transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700">
             {price}
           </div>
         )}
       </div>
-      <h3 className="font-serif text-xl font-bold mb-2 group-hover:text-brand-secondary transition-colors">
-        {title}
-      </h3>
-      <p className="text-gray-600 text-sm mb-6 line-clamp-3 leading-relaxed">
-        {description}
-      </p>
-      <a
-        href={buyUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center justify-center w-full py-2.5 px-4 bg-brand-primary text-white rounded-lg text-sm font-medium hover:bg-brand-secondary transition-colors"
-      >
-        Buy Now
-      </a>
+
+      <div className="p-10">
+        <h3 className="font-serif text-3xl md:text-4xl font-bold mb-4 tracking-tighter leading-tight group-hover:text-brand-accent transition-colors duration-500 italic">
+          {title}
+        </h3>
+        <p className="text-brand-muted text-sm mb-10 line-clamp-3 leading-relaxed font-light">
+          {description}
+        </p>
+        <a
+          href={buyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-between w-full py-6 px-8 bg-brand-primary text-brand-accent rounded-2xl text-xs font-black uppercase tracking-[0.3em] hover:bg-brand-secondary transition-all duration-500 group/btn shadow-xl"
+        >
+          Acquire Ebook
+          <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-2 transition-transform duration-500 text-brand-accent" />
+        </a>
+      </div>
     </motion.div>
   );
 }
