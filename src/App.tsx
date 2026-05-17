@@ -132,12 +132,14 @@ export default function App() {
       {/* Navigation */}
       <header className="sticky top-0 z-50 bg-white/40 backdrop-blur-xl border-b border-white/20">
         <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-brand-primary rounded-full flex items-center justify-center text-brand-accent transform hover:rotate-12 transition-transform">
-              <BookOpen className="w-5 h-5" />
-            </div>
-            <span className="font-serif text-2xl font-black tracking-tighter text-brand-primary">EVELYN REED</span>
-          </div>
+          <a href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
+            <img 
+              src="https://i.ibb.co/NdCS3VPv/Screenshot-2026-05-17-13-08-17-00-40deb401b9ffe8e1df2f1cc5ba480b12.jpg" 
+              alt="Evelyn Reed Logo" 
+              className="h-10 w-auto object-contain"
+              referrerPolicy="no-referrer"
+            />
+          </a>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-10">
@@ -333,12 +335,14 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-20 mb-32">
             <div className="md:col-span-2">
-              <div className="flex items-center gap-3 mb-10">
-                <div className="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center text-brand-accent">
-                   <BookOpen className="w-4 h-4" />
-                </div>
-                <span className="font-serif text-2xl font-black tracking-tighter">EVELYN REED</span>
-              </div>
+              <a href="/" className="flex items-center gap-3 mb-10 hover:opacity-80 transition-opacity">
+                <img 
+                  src="https://i.ibb.co/NdCS3VPv/Screenshot-2026-05-17-13-08-17-00-40deb401b9ffe8e1df2f1cc5ba480b12.jpg" 
+                  alt="Evelyn Reed Logo" 
+                  className="h-8 w-auto object-contain"
+                  referrerPolicy="no-referrer"
+                />
+              </a>
               <p className="text-gray-400 text-lg leading-relaxed font-light max-w-sm mb-10">
                 Independent author dedicated to the craft of deep emotional storytelling and intellectual exploration.
               </p>
