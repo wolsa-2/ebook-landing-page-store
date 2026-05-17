@@ -257,7 +257,7 @@ export default function App() {
         <section className="py-32 container max-w-7xl mx-auto px-6">
            <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
               {[
-                { label: "Copies Sold", val: "250K+" },
+                { label: "Copies Sold", val: "2k" },
                 { label: "Average Rating", val: "4.8/5" },
                 { label: "Countries", val: "85+" },
                 { label: "Top Charts", val: "#1" }
