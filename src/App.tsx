@@ -27,28 +27,28 @@ export default function App() {
 
   const kdpBooks: any[] = [
     {
-      title: "The Silent Witness",
-      description: "A gripping psychological thriller that explores the dark secrets hidden in plain sight. In a small town where everyone knows everyone, one person's silence is the most dangerous weapon of all.",
-      coverUrl: "https://picsum.photos/seed/kdp_sw/600/800",
-      buyUrl: "https://www.amazon.com/kdp",
-      price: "$9.99",
+      title: "A CONCISE TEXTBOOK OF HUMAN PSYCHOLOGY",
+      description: "A Concise Textbook of Human Psychology is a simple and easy-to-understand guide to human behavior, emotions, cognition, personality, memory, learning, and mental health. Designed for students and beginners, this book explains key psychological concepts in a clear and engaging way, making psychology accessible for everyone.",
+      coverUrl: "https://i.ibb.co/V6tV9bh/file-0000000086a0720884a100170fc70418.jpg",
+      buyUrl: "https://amzn.in/d/05XLj9sX",
+      price: "New Release",
       platform: "Amazon Kindle"
     },
     {
-      title: "Midnight in Venice",
-      description: "An evocative historical romance set against the backdrop of late 18th-century Venice. When a street musician crosses paths with a reclusive aristocrat, a series of events is set in motion that will change their lives forever.",
-      coverUrl: "https://picsum.photos/seed/kdp_miv/600/800",
-      buyUrl: "https://www.amazon.com/kdp",
-      price: "$12.99",
+      title: "The Space Between Heartbeats",
+      description: "The Space Between Heartbeats is a slow-burn emotional romance about love, distance, and the quiet moments that change everything.",
+      coverUrl: "https://i.ibb.co/dsZtpHgC/1.png",
+      buyUrl: "https://amzn.in/d/0b9sRR8M",
+      price: "New Release",
       platform: "Amazon Kindle"
     }
   ];
 
   const gpBooks: any[] = [
     {
-      title: "A Concise Textbook of Human Psychology",
-      description: "A Concise Textbook of Human Psychology is a simple psychology guide covering behavior, emotions, memory, personality, and mental health for students and beginners.",
-      coverUrl: "https://i.ibb.co/4DzcQy4/file-0000000086a0720884a100170fc70418.jpg",
+      title: "A CONCISE TEXTBOOK OF HUMAN PSYCHOLOGY",
+      description: "A Concise Textbook of Human Psychology is a simple and easy-to-understand guide to human behavior, emotions, cognition, personality, memory, learning, and mental health. Designed for students and beginners, this book explains key psychological concepts in a clear and engaging way, making psychology accessible for everyone.",
+      coverUrl: "https://i.ibb.co/V6tV9bh/file-0000000086a0720884a100170fc70418.jpg",
       buyUrl: "https://openinapp.link/gtm3w",
       price: "New Release",
       platform: "Google Play"
@@ -56,7 +56,7 @@ export default function App() {
     {
       title: "The Space Between Heartbeats",
       description: "The Space Between Heartbeats is a slow-burn emotional romance about love, distance, and the quiet moments that change everything.",
-      coverUrl: "https://i.ibb.co/9d4FD8N/1.png",
+      coverUrl: "https://i.ibb.co/dsZtpHgC/1.png",
       buyUrl: "https://play.google.com/store/books/details?id=QL_TEQAAQBAJ",
       price: "Romance",
       platform: "Google Play"
@@ -145,12 +145,12 @@ export default function App() {
               <a 
                 key={link.name} 
                 href={link.href} 
-                className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-brand-primary transition-colors"
+                className="text-[11px] font-black uppercase tracking-[0.2em] text-gray-600 hover:text-brand-primary transition-colors"
               >
                 {link.name}
               </a>
             ))}
-            <button className="px-6 py-2.5 bg-brand-primary text-brand-accent rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-secondary transition-all shadow-lg hover:shadow-brand-accent/20">
+            <button className="px-6 py-2.5 bg-brand-primary text-brand-accent rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-brand-secondary transition-all shadow-lg hover:shadow-brand-accent/20">
               Subscribe
             </button>
           </div>
@@ -207,7 +207,7 @@ export default function App() {
                 GOOGLE PLAY <span className="italic font-light text-brand-muted">GLOBAL</span>
               </h2>
             </div>
-            <p className="max-w-sm text-brand-muted text-lg font-light">
+            <p className="max-w-sm text-brand-primary/70 text-lg font-medium">
               Available in 75+ territories with seamless synchronization across Android, iOS, and Web.
             </p>
           </div>
@@ -239,7 +239,7 @@ export default function App() {
                   THE <span className="text-brand-accent">AMAZON</span> <br/>
                   EXPERIENCE
                 </h2>
-                <p className="text-brand-muted text-xl font-light leading-relaxed">
+                <p className="text-white/70 text-xl font-medium leading-relaxed">
                   Highly curated works optimized for the world's most popular reading devices. Immersive formatting and exclusive digital content.
                 </p>
               </div>
@@ -270,7 +270,7 @@ export default function App() {
                   className="text-center"
                 >
                   <div className="text-4xl md:text-6xl font-serif font-black text-brand-primary mb-2 italic">{stat.val}</div>
-                  <div className="text-[10px] uppercase tracking-[0.3em] font-black text-brand-muted">{stat.label}</div>
+                  <div className="text-[10px] uppercase tracking-[0.3em] font-black text-brand-primary">{stat.label}</div>
                 </motion.div>
               ))}
            </div>
@@ -376,10 +376,10 @@ export default function App() {
           </div>
           
           <div className="pt-10 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
-            <span className="text-gray-300 text-xs font-black uppercase tracking-[0.4em]">© {new Date().getFullYear()} Evelyn Reed Studio</span>
+            <span className="text-gray-500 text-xs font-black uppercase tracking-[0.4em]">© {new Date().getFullYear()} Evelyn Reed Studio</span>
             <div className="flex gap-12">
-              <a href="#" className="text-[10px] font-black uppercase tracking-widest text-gray-300 hover:text-brand-primary transition-colors">Legal Matrix</a>
-              <a href="#" className="text-[10px] font-black uppercase tracking-widest text-gray-300 hover:text-brand-primary transition-colors">Data Privacy</a>
+              <a href="#" className="text-[10px] font-black uppercase tracking-widest text-gray-600 hover:text-brand-primary transition-colors">Legal Matrix</a>
+              <a href="#" className="text-[10px] font-black uppercase tracking-widest text-gray-600 hover:text-brand-primary transition-colors">Data Privacy</a>
             </div>
           </div>
         </div>

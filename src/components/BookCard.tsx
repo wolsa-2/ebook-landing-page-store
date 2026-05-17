@@ -59,14 +59,14 @@ export function BookCard({ title, description, coverUrl, buyUrl, price, platform
         <h3 className="font-serif text-3xl md:text-4xl font-bold mb-4 tracking-tighter leading-tight group-hover:text-brand-accent transition-colors duration-500 italic">
           {title}
         </h3>
-        <p className="text-brand-muted text-sm mb-10 line-clamp-3 leading-relaxed font-light">
+        <p className="text-brand-primary/70 text-sm mb-10 line-clamp-3 leading-relaxed font-semibold">
           {description}
         </p>
         <a
           href={buyUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-between w-full py-6 px-8 bg-brand-primary text-brand-accent rounded-2xl text-xs font-black uppercase tracking-[0.3em] hover:bg-brand-secondary transition-all duration-500 group/btn shadow-xl"
+          className="inline-flex items-center justify-between w-full py-6 px-8 bg-brand-primary text-brand-accent rounded-2xl text-[11px] font-black uppercase tracking-[0.3em] hover:bg-brand-secondary transition-all duration-500 group/btn shadow-xl"
         >
           Acquire Ebook
           <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-2 transition-transform duration-500 text-brand-accent" />
