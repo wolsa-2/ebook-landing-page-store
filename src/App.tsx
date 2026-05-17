@@ -134,11 +134,12 @@ export default function App() {
         <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <a href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
             <img 
-              src="https://i.ibb.co/NdCS3VPv/Screenshot-2026-05-17-13-08-17-00-40deb401b9ffe8e1df2f1cc5ba480b12.jpg" 
-              alt="Evelyn Reed Logo" 
-              className="h-10 w-auto object-contain"
+              src="https://i.ibb.co/Z6nGGcs7/Screenshot-2026-05-17-13-16-52-87-40deb401b9ffe8e1df2f1cc5ba480b12.jpg" 
+              alt="Evelyn Reed" 
+              className="h-10 w-10 rounded-full object-cover border-2 border-brand-accent shadow-sm"
               referrerPolicy="no-referrer"
             />
+            <span className="font-serif text-2xl font-black tracking-tighter text-brand-primary">ebook</span>
           </a>
 
           {/* Desktop Nav */}
@@ -337,11 +338,12 @@ export default function App() {
             <div className="md:col-span-2">
               <a href="/" className="flex items-center gap-3 mb-10 hover:opacity-80 transition-opacity">
                 <img 
-                  src="https://i.ibb.co/NdCS3VPv/Screenshot-2026-05-17-13-08-17-00-40deb401b9ffe8e1df2f1cc5ba480b12.jpg" 
-                  alt="Evelyn Reed Logo" 
-                  className="h-8 w-auto object-contain"
+                  src="https://i.ibb.co/Z6nGGcs7/Screenshot-2026-05-17-13-16-52-87-40deb401b9ffe8e1df2f1cc5ba480b12.jpg" 
+                  alt="Evelyn Reed" 
+                  className="h-10 w-10 rounded-full object-cover border-2 border-brand-accent shadow-sm"
                   referrerPolicy="no-referrer"
                 />
+                <span className="font-serif text-2xl font-black tracking-tighter">ebook</span>
               </a>
               <p className="text-gray-400 text-lg leading-relaxed font-light max-w-sm mb-10">
                 Independent author dedicated to the craft of deep emotional storytelling and intellectual exploration.
